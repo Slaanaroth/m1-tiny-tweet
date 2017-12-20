@@ -90,7 +90,7 @@ public class MessagesAPI
 	  
 	  private List<Message> retrieveMessages(String user)
 	  {	  
-			Filter propertyFilter = new FilterPredicate("receivers", FilterOperator.EQUAL, "me2");
+			Filter propertyFilter = new FilterPredicate("receivers", FilterOperator.EQUAL, user);
 			
 			  Query query = new Query("MessageIndex").setKeysOnly().setFilter(propertyFilter);
 			  List<Entity> results =
